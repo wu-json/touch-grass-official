@@ -1,27 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2hr0k7od3eu7"]
+[gd_scene load_steps=5 format=3 uid="uid://d2hr0k7od3eu7"]
 
 [ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_75xao"]
 [ext_resource type="Texture2D" uid="uid://cpqnleh8yfyv1" path="res://assets/branding/welcome-text.png" id="2_b2n4c"]
-[ext_resource type="Script" path="res://scenes/Background.gd" id="2_e4e4x"]
+[ext_resource type="Script" path="res://scenes/TitleText.gd" id="3_q4uux"]
 [ext_resource type="Texture2D" uid="uid://qjtciaoa845v" path="res://assets/branding/welcome-art.png" id="3_tfpgu"]
 
-[sub_resource type="Theme" id="Theme_oe1sb"]
+[node name="Welcome" type="Node"]
 
-[node name="Welcome" type="Node2D"]
-
-[node name="Background" type="TextureRect" parent="."]
-offset_right = 891.0
-offset_bottom = 512.0
-theme = SubResource("Theme_oe1sb")
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(576.75, 324.5)
+scale = Vector2(1.29574, 1.2793)
 texture = ExtResource("1_75xao")
-script = ExtResource("2_e4e4x")
+metadata/_edit_lock_ = true
 
-[node name="Title" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(599, 179)
+[node name="TitleText" type="Sprite2D" parent="."]
+position = Vector2(588, 139)
 texture = ExtResource("2_b2n4c")
+script = ExtResource("3_q4uux")
 
-[node name="WelcomeArt" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(572, 357)
+[node name="TitleArt" type="Sprite2D" parent="."]
+position = Vector2(563, 318)
 texture = ExtResource("3_tfpgu")
