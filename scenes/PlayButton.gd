@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Button
 
 func _ready():
 	var viewport_size = get_viewport_rect().size
