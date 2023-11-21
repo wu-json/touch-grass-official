@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2hr0k7od3eu7"]
+
+[ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_jsm14"]
+[ext_resource type="Texture2D" uid="uid://cpqnleh8yfyv1" path="res://assets/ui/welcome-text.png" id="2_hhvlk"]
+[ext_resource type="Script" path="res://scenes/welcome/TitleText.gd" id="3_76d70"]
+[ext_resource type="Texture2D" uid="uid://qjtciaoa845v" path="res://assets/ui/welcome-art.png" id="4_0a0k4"]
+[ext_resource type="Script" path="res://scenes/welcome/TitleArt.gd" id="5_1o4is"]
+[ext_resource type="Texture2D" uid="uid://c1co61f4no3l8" path="res://assets/ui/play-button.png" id="6_d8ulv"]
+[ext_resource type="Script" path="res://scenes/welcome/TextureButton.gd" id="7_ulsg7"]
+
+[node name="Welcome" type="Node2D"]
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(576.75, 324.5)
+scale = Vector2(1.29574, 1.2793)
+texture = ExtResource("1_jsm14")
+
+[node name="TitleText" type="Sprite2D" parent="."]
+position = Vector2(588, 139)
+texture = ExtResource("2_hhvlk")
+script = ExtResource("3_76d70")
+
+[node name="TitleArt" type="Sprite2D" parent="."]
+position = Vector2(563, 318)
+texture = ExtResource("4_0a0k4")
+script = ExtResource("5_1o4is")
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 0.00012207
+offset_top = 6.10352e-05
+offset_right = 254.0
+offset_bottom = 87.0001
+texture_normal = ExtResource("6_d8ulv")
+script = ExtResource("7_ulsg7")
