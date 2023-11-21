@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://q4wy6oj784do"]
+[gd_scene load_steps=2 format=3 uid="uid://q4wy6oj784do"]
+
+[ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_8f6o5"]
 
 [node name="play" type="Node2D"]
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(576.75, 324.5)
+scale = Vector2(1.29574, 1.2793)
+texture = ExtResource("1_8f6o5")
