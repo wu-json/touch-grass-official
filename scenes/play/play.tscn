@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_xqeqe"]
 [ext_resource type="Script" path="res://scenes/Play/Score.gd" id="8_mv38e"]
 
-[node name="play" type="Node2D"]
+[node name="Play" type="Node2D"]
 script = ExtResource("1_h7aus")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
