@@ -30,5 +30,6 @@ script = ExtResource("5_re5p7")
 [node name="ScoreLabel" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.709804, 0.980392, 0, 1)
 theme_override_fonts/font = ExtResource("7_38kus")
 script = ExtResource("8_15qip")
