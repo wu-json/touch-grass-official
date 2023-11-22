@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgh0p4bp18bcq"]
+[gd_scene load_steps=9 format=3 uid="uid://dgh0p4bp18bcq"]
 
 [ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_eenou"]
+[ext_resource type="Script" path="res://scenes/Score/Score.gd" id="1_rwxlj"]
 [ext_resource type="Texture2D" uid="uid://dile3lglid4lo" path="res://assets/ui/play-again-button.png" id="2_3vmls"]
 [ext_resource type="Script" path="res://scenes/Score/PlayAgainButton.gd" id="3_uk60y"]
 [ext_resource type="Texture2D" uid="uid://bue3jvod0svxx" path="res://assets/ui/score-art.png" id="4_oj7qh"]
 [ext_resource type="Script" path="res://scenes/Score/ScoreArt.gd" id="5_re5p7"]
+[ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_38kus"]
+[ext_resource type="Script" path="res://scenes/Score/ScoreLabel.gd" id="8_15qip"]
 
 [node name="Score" type="Node2D"]
+script = ExtResource("1_rwxlj")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
 position = Vector2(576.75, 324.5)
@@ -22,3 +26,9 @@ script = ExtResource("3_uk60y")
 [node name="ScoreArt" type="Sprite2D" parent="."]
 texture = ExtResource("4_oj7qh")
 script = ExtResource("5_re5p7")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("7_38kus")
+script = ExtResource("8_15qip")
