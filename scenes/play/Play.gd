@@ -9,7 +9,10 @@ func _spawn_random_mob():
 	var start_mob = grass_mob.instantiate()
 	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
 	add_child(start_mob)
-
+	
+func on_click_mob():
+	print("on click mob")
+	
 func _ready():
 	$ScoreCounter.set_text(str(score))
 	_spawn_random_mob()
