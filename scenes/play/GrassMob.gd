@@ -1,9 +1,6 @@
-extends Sprite2D
+extends Node2D
 
-func _ready():
-	self.scale = Vector2(0.5, 0.5)
-	var viewport_size = get_viewport_rect().size
-	position = Vector2((viewport_size.x / 2), (viewport_size.y / 2))
+signal grass_pressed(points)
 
-func _process(delta):
-	pass
+func on_grass_pressed(points):
+	grass_pressed.emit(points)
