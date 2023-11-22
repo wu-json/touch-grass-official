@@ -7,6 +7,7 @@ var score = 0;
 func on_click_mob(points):
 	score += points
 	$ScoreCounter.set_text(str(score))
+	_spawn_random_mob()
 
 func _spawn_random_mob():
 	var viewport_size = get_viewport_rect().size
