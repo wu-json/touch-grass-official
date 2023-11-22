@@ -11,6 +11,3 @@ func _input_event(viewport, event, shape_idx):
 
 func _ready():
 	parent = get_parent()
-
-func _process(_delta):
-	pass
