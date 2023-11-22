@@ -10,7 +10,7 @@ func on_click_mob(points):
 	_spawn_random_mob()
 	
 func on_timer_end():
-	get_tree().change_scene_to_file("res://scenes/Score/Score.tscn")
+	SceneSwitcher.change_scene("res://scenes/Score/Score.tscn", { "score": score })
 
 func _spawn_random_mob():
 	var viewport_size = get_viewport_rect().size
