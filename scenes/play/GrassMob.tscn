@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://heqluhvwqkq0"]
+
+[ext_resource type="Texture2D" uid="uid://dheds8aochomh" path="res://assets/mobs/grass.png" id="1_3b1lp"]
+[ext_resource type="Script" path="res://scenes/Play/GrassMob.gd" id="2_vy5xm"]
+
+[node name="GrassMob" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3b1lp")
+script = ExtResource("2_vy5xm")
