@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://q4wy6oj784do"]
+[gd_scene load_steps=9 format=3 uid="uid://q4wy6oj784do"]
 
 [ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_8f6o5"]
 [ext_resource type="Script" path="res://scenes/Play/Play.gd" id="1_h7aus"]
 [ext_resource type="Texture2D" uid="uid://bj1rxrlweyof3" path="res://assets/characters/person.png" id="2_i65a2"]
 [ext_resource type="Script" path="res://scenes/Play/Character.gd" id="3_iwegr"]
+[ext_resource type="Script" path="res://scenes/Play/GameTimerLabel.gd" id="7_01nju"]
 [ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_xqeqe"]
+[ext_resource type="Script" path="res://scenes/Play/GameTimer.gd" id="8_iol4g"]
 [ext_resource type="Script" path="res://scenes/Play/Score.gd" id="8_mv38e"]
 
 [node name="Play" type="Node2D"]
@@ -25,3 +27,12 @@ offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("7_xqeqe")
 text = "YOOOOOOkj"
 script = ExtResource("8_mv38e")
+
+[node name="GameTimer" type="Timer" parent="."]
+script = ExtResource("8_iol4g")
+
+[node name="GameTimerLabel" type="Label" parent="GameTimer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("7_xqeqe")
+script = ExtResource("7_01nju")

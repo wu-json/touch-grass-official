@@ -8,6 +8,9 @@ func on_click_mob(points):
 	score += points
 	$ScoreCounter.set_text(str(score))
 	_spawn_random_mob()
+	
+func on_timer_end():
+	SceneSwitcher.change_scene("res://scenes/Score/Score.tscn", { "score": score })
 
 func _spawn_random_mob():
 	var viewport_size = get_viewport_rect().size
@@ -19,6 +22,5 @@ func _spawn_random_mob():
 func _ready():
 	$ScoreCounter.set_text(str(score))
 	_spawn_random_mob()
-
-func _process(delta):
-	pass
+	
+	$GameTimer.connect("timeout", on_timer_end)
