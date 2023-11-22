@@ -5,8 +5,8 @@ var grass_mob = preload("res://scenes/Play/GrassMob.tscn")
 var score = 0;
 
 func on_click_mob(points):
-	print("on click mob")
-	print(points)
+	score += points
+	$ScoreCounter.set_text(str(score))
 
 func _spawn_random_mob():
 	var viewport_size = get_viewport_rect().size
