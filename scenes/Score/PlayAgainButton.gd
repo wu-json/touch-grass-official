@@ -4,4 +4,4 @@ func _ready():
 	position = Vector2(30, 30)
 
 func _pressed():
-	get_tree().change_scene_to_file("res://scenes/Play/Play.tscn")
+	SceneSwitcher.change_scene("res://scenes/Play/Play.tscn")
