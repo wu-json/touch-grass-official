@@ -19,6 +19,3 @@ func _spawn_random_mob():
 func _ready():
 	$ScoreCounter.set_text(str(score))
 	_spawn_random_mob()
-
-func _process(delta):
-	pass

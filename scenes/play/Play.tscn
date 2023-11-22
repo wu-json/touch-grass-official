@@ -28,10 +28,11 @@ theme_override_fonts/font = ExtResource("7_xqeqe")
 text = "YOOOOOOkj"
 script = ExtResource("8_mv38e")
 
-[node name="GameTimerLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-script = ExtResource("7_01nju")
-
 [node name="GameTimer" type="Timer" parent="."]
 script = ExtResource("8_iol4g")
+
+[node name="GameTimerLabel" type="Label" parent="GameTimer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("7_xqeqe")
+script = ExtResource("7_01nju")
