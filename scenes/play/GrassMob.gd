@@ -1,7 +1,12 @@
-extends Sprite2D
+extends Node2D
+
+signal grass_pressed(points)
+
+func on_grass_pressed(points):
+	grass_pressed.emit(points)
 
 func _ready():
-	self.scale = Vector2(0.5, 0.5)
+	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
