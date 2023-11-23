@@ -9,12 +9,14 @@ func _ready():
 
 func _process(delta):
 	if (is_capy_going_right):
-		if (self.position.x < 800):
+		self.flip_h = false
+		if self.position.x < 800:
 			self.position.x += 30 * delta
 		else:
 			is_capy_going_right = false
 	else:
-		if (self.position.x > 300):
+		self.flip_h = true
+		if self.position.x > 300:
 			self.position.x -= 30 * delta
 		else:
 			is_capy_going_right = true
