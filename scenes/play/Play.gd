@@ -6,7 +6,7 @@ var score = 0;
 
 func on_click_mob(points):
 	score += points
-	$ScoreCounter.set_text(str(score))
+	$Overlay/ScoreCounter.set_text(str(score))
 	_spawn_random_mob()
 	
 func on_timer_end():
@@ -20,7 +20,7 @@ func _spawn_random_mob():
 	start_mob.connect("grass_pressed", on_click_mob)
 	
 func _ready():
-	$ScoreCounter.set_text(str(score))
+	$Overlay/ScoreCounter.set_text(str(score))
 	_spawn_random_mob()
 	
 	$GameTimer.connect("timeout", on_timer_end)

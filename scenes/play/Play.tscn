@@ -17,11 +17,22 @@ position = Vector2(570, 328)
 scale = Vector2(1.05739, 1.04397)
 texture = ExtResource("2_mi7v6")
 
-[node name="ScoreBorder" type="Sprite2D" parent="."]
+[node name="GameTimer" type="Timer" parent="."]
+script = ExtResource("8_iol4g")
+
+[node name="GameTimerLabel" type="Label" parent="GameTimer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("7_xqeqe")
+script = ExtResource("7_01nju")
+
+[node name="Overlay" type="CanvasLayer" parent="."]
+
+[node name="ScoreBorder" type="Sprite2D" parent="Overlay"]
 position = Vector2(1046, 74)
 texture = ExtResource("3_dbw4g")
 
-[node name="ScoreCounter" type="Label" parent="."]
+[node name="ScoreCounter" type="Label" parent="Overlay"]
 offset_left = 961.0
 offset_top = 40.0
 offset_right = 1052.0
@@ -31,15 +42,6 @@ theme_override_fonts/font = ExtResource("7_xqeqe")
 theme_override_font_sizes/font_size = 30
 text = "0"
 
-[node name="Character" type="Sprite2D" parent="."]
+[node name="Character" type="Sprite2D" parent="Overlay"]
 texture = ExtResource("3_rttj0")
 script = ExtResource("3_iwegr")
-
-[node name="GameTimer" type="Timer" parent="."]
-script = ExtResource("8_iol4g")
-
-[node name="GameTimerLabel" type="Label" parent="GameTimer"]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("7_xqeqe")
-script = ExtResource("7_01nju")
