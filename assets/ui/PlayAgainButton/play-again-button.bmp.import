@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://byow21kdkwgc7"
+path="res://.godot/imported/play-again-button.bmp-7ec648c0bd9d5ef2b805c9f489b82b3c.res"
+
+[deps]
+
+source_file="res://assets/ui/PlayAgainButton/play-again-button.bmp"
+dest_files=["res://.godot/imported/play-again-button.bmp-7ec648c0bd9d5ef2b805c9f489b82b3c.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

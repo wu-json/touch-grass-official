@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgh0p4bp18bcq"]
+[gd_scene load_steps=10 format=3 uid="uid://dgh0p4bp18bcq"]
 
-[ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_eenou"]
 [ext_resource type="Script" path="res://scenes/Score/Score.gd" id="1_rwxlj"]
-[ext_resource type="Texture2D" uid="uid://dile3lglid4lo" path="res://assets/ui/play-again-button.png" id="2_3vmls"]
+[ext_resource type="Texture2D" uid="uid://dibrqxc40aru" path="res://assets/ui/green.png" id="2_f6j2l"]
 [ext_resource type="Script" path="res://scenes/Score/PlayAgainButton.gd" id="3_uk60y"]
+[ext_resource type="Texture2D" uid="uid://dile3lglid4lo" path="res://assets/ui/PlayAgainButton/play-again-button.png" id="3_x18ji"]
 [ext_resource type="Texture2D" uid="uid://bue3jvod0svxx" path="res://assets/ui/score-art.png" id="4_oj7qh"]
+[ext_resource type="BitMap" uid="uid://byow21kdkwgc7" path="res://assets/ui/PlayAgainButton/play-again-button.bmp" id="4_xgac1"]
 [ext_resource type="Script" path="res://scenes/Score/ScoreArt.gd" id="5_re5p7"]
 [ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_38kus"]
 [ext_resource type="Script" path="res://scenes/Score/ScoreLabel.gd" id="8_15qip"]
@@ -13,14 +14,17 @@
 script = ExtResource("1_rwxlj")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
-position = Vector2(576.75, 324.5)
-scale = Vector2(1.29574, 1.2793)
-texture = ExtResource("1_eenou")
+position = Vector2(571, 327)
+scale = Vector2(1.0699, 1.05632)
+texture = ExtResource("2_f6j2l")
 
 [node name="PlayAgainButton" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("2_3vmls")
+offset_left = 806.0
+offset_top = 507.0
+offset_right = 1157.0
+offset_bottom = 644.0
+texture_normal = ExtResource("3_x18ji")
+texture_click_mask = ExtResource("4_xgac1")
 script = ExtResource("3_uk60y")
 
 [node name="ScoreArt" type="Sprite2D" parent="."]
