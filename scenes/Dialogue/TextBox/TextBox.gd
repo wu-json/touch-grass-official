@@ -14,24 +14,32 @@ enum State {
 }
 
 var current_state = State.READY
+var text_queue = []
 
 func _ready():
 	hide_textbox()
-	add_text("This text is going to be added! sdfsdf sdf sdfds fsd fsdf sssfdsfds fsdf sdf sdfds")
+	queue_text("1 hello mf saldkjflskdjflkdsaf")
+	queue_text("2 hello mf saldkjflskdjflkdsaf")
+	queue_text("3 hello mf saldkjflskdjflkdsaf")
+	queue_text("4 hello mf saldkjflskdjflkdsaf")
 	
 func _process(delta):
 	match current_state:
 		State.READY:
-			pass
+			if !text_queue.is_empty():
+				display_text()
 		State.READING:
 			if Input.is_action_just_pressed("click"):
 				change_state(State.FINISHED)
-				tween.stop()
-				label.set_visible_ratio(1)
 		State.FINISHED:
 			if Input.is_action_just_pressed('click'):
-				print("Yo")
+				tween.kill()
+				label.set_visible_ratio(1)
+				tween = get_tree().create_tween()
 				change_state(State.READY)
+				
+func queue_text(next_text):
+	text_queue.push_back(next_text)
 
 func hide_textbox():
 	label.text = ""
@@ -40,11 +48,13 @@ func hide_textbox():
 func show_textbox():
 	textbox_container.show()
 	
-func add_text(next_text):
+func display_text():
+	var next_text = text_queue.pop_front()
 	label.text = next_text
 	change_state(State.READING)
 	show_textbox()
 	label.set_visible_ratio(0)
+	tween = get_tree().create_tween()
 	tween.tween_property(label, "visible_ratio", 1.0, len(next_text) * CHAR_READ_RATE)
 	await tween.finished
 	change_state(State.FINISHED)
