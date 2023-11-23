@@ -6,7 +6,7 @@ const CHAR_READ_RATE = 0.03
 # The tutorial was made using Godot 3 but I adapted it to Godot 4 (Tweens are no longer a node).
 @onready var textbox_container = $TextBoxContainer
 @onready var label = $TextBoxContainer/MarginContainer/HBoxContainer/Label
-@onready var tween = get_tree().create_tween()
+@onready var tween 
 
 enum State {
 	READY,
@@ -17,10 +17,12 @@ enum State {
 var current_state = State.READY
 var text_queue = []
 
+signal text_queue_exhausted
+
 func _ready():
 	hide_textbox()
 	
-func _process(delta):
+func _process(_delta):
 	match current_state:
 		State.READY:
 			if !text_queue.is_empty():
@@ -32,10 +34,11 @@ func _process(delta):
 				change_state(State.FINISHED)
 				tween.kill()
 				label.set_visible_ratio(1)
-				tween = get_tree().create_tween()
 		State.FINISHED:
 			if Input.is_action_just_pressed('click'):
 				change_state(State.READY)
+				if text_queue.is_empty():
+					text_queue_exhausted.emit()
 				
 func queue_text(next_text):
 	text_queue.push_back(next_text)

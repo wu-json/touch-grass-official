@@ -20,3 +20,5 @@ texture = ExtResource("2_hrftv")
 script = ExtResource("3_s4h3i")
 
 [node name="TextBox" parent="." instance=ExtResource("5_cucfc")]
+
+[connection signal="text_queue_exhausted" from="TextBox" to="." method="_on_text_box_text_queue_exhausted"]

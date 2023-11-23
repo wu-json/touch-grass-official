@@ -14,5 +14,6 @@ func _ready():
 	for dialogue in DIALOGUE:
 		$TextBox.queue_text(dialogue)
 
-func _process(_delta):
-	print(len($TextBox.text_queue))
+
+func _on_text_box_text_queue_exhausted():
+	print("done")
