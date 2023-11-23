@@ -17,3 +17,7 @@ func _ready():
 
 func _on_text_box_text_queue_exhausted():
 	print("done")
+
+
+func _on_skip_button_mouse_exited():
+	pass # Replace with function body.
