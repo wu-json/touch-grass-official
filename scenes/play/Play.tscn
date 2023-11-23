@@ -19,18 +19,27 @@ texture = ExtResource("2_mi7v6")
 [node name="Overlay" type="CanvasLayer" parent="."]
 
 [node name="ScoreBorder" type="Sprite2D" parent="Overlay"]
-position = Vector2(1046, 74)
+position = Vector2(1034, 81)
 texture = ExtResource("3_dbw4g")
 
 [node name="ScoreCounter" type="Label" parent="Overlay"]
-offset_left = 961.0
-offset_top = 40.0
-offset_right = 1052.0
-offset_bottom = 82.0
+offset_left = 1017.0
+offset_top = 47.0
+offset_right = 1108.0
+offset_bottom = 89.0
 theme_override_colors/font_color = Color(0.380392, 0.909804, 0.584314, 1)
 theme_override_fonts/font = ExtResource("7_xqeqe")
 theme_override_font_sizes/font_size = 30
 text = "0"
+
+[node name="ScoreLabel" type="Label" parent="Overlay"]
+offset_left = 936.0
+offset_top = 47.0
+offset_right = 1060.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("7_xqeqe")
+theme_override_font_sizes/font_size = 25
+text = "Score:"
 
 [node name="Character" type="Sprite2D" parent="Overlay"]
 position = Vector2(581, 578)
