@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0skadof3t1j3"]
+[gd_scene load_steps=4 format=3 uid="uid://b0skadof3t1j3"]
 
 [ext_resource type="Texture2D" uid="uid://cs62aqdeppt40" path="res://assets/backgrounds/story.png" id="1_daq60"]
+[ext_resource type="Texture2D" uid="uid://dulcij7bq46ug" path="res://assets/ui/capy-in-water.png" id="2_hrftv"]
+[ext_resource type="Script" path="res://scenes/Dialogue/Capy.gd" id="3_s4h3i"]
 
 [node name="Dialogue" type="Node2D"]
 
@@ -8,3 +10,8 @@
 position = Vector2(577.889, 326)
 scale = Vector2(1.01543, 1.01543)
 texture = ExtResource("1_daq60")
+
+[node name="Capy" type="Sprite2D" parent="."]
+position = Vector2(594, 481)
+texture = ExtResource("2_hrftv")
+script = ExtResource("3_s4h3i")
