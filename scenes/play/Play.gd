@@ -23,4 +23,4 @@ func _ready():
 	$Overlay/ScoreCounter.set_text(str(score))
 	_spawn_random_mob()
 	
-	$GameTimer.connect("timeout", on_timer_end)
+	$Overlay/GameTimer.connect("timeout", on_timer_end)

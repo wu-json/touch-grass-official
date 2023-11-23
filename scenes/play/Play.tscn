@@ -16,15 +16,6 @@ position = Vector2(570, 328)
 scale = Vector2(1.05739, 1.04397)
 texture = ExtResource("2_mi7v6")
 
-[node name="GameTimer" type="Timer" parent="."]
-script = ExtResource("8_iol4g")
-
-[node name="GameTimerLabel" type="Label" parent="GameTimer"]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("7_xqeqe")
-script = ExtResource("7_01nju")
-
 [node name="Overlay" type="CanvasLayer" parent="."]
 
 [node name="ScoreBorder" type="Sprite2D" parent="Overlay"]
@@ -44,3 +35,12 @@ text = "0"
 [node name="Character" type="Sprite2D" parent="Overlay"]
 position = Vector2(581, 578)
 texture = ExtResource("3_rttj0")
+
+[node name="GameTimer" type="Timer" parent="Overlay"]
+script = ExtResource("8_iol4g")
+
+[node name="GameTimerLabel" type="Label" parent="Overlay/GameTimer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("7_xqeqe")
+script = ExtResource("7_01nju")
