@@ -3,6 +3,7 @@ extends CanvasLayer
 const CHAR_READ_RATE = 0.03
 
 # Adapted most of this from https://www.youtube.com/watch?v=QEHOiORnXIk&t=301s&ab_channel=JonTopielski
+# The tutorial was made using Godot 3 but I adapted it to Godot 4 (Tweens are no longer a node).
 @onready var textbox_container = $TextBoxContainer
 @onready var label = $TextBoxContainer/MarginContainer/HBoxContainer/Label
 @onready var tween = get_tree().create_tween()
