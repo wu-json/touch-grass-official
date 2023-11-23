@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpqnleh8yfyv1"
-path="res://.godot/imported/welcome-text.png-478ddf3ab45580515376dec90dc2eb3b.ctex"
+uid="uid://dulcij7bq46ug"
+path="res://.godot/imported/capy-in-water.png-67782de82bbe61a942add5cd3b2f6348.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/welcome-text.png"
-dest_files=["res://.godot/imported/welcome-text.png-478ddf3ab45580515376dec90dc2eb3b.ctex"]
+source_file="res://assets/ui/capy-in-water.png"
+dest_files=["res://.godot/imported/capy-in-water.png-67782de82bbe61a942add5cd3b2f6348.ctex"]
 
 [params]
 

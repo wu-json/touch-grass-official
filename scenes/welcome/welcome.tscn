@@ -1,34 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2hr0k7od3eu7"]
+[gd_scene load_steps=7 format=3 uid="uid://d2hr0k7od3eu7"]
 
-[ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_jsd4k"]
-[ext_resource type="Texture2D" uid="uid://cpqnleh8yfyv1" path="res://assets/ui/welcome-text.png" id="2_o6myq"]
-[ext_resource type="Script" path="res://scenes/Welcome/TitleText.gd" id="3_blcxa"]
-[ext_resource type="Texture2D" uid="uid://qjtciaoa845v" path="res://assets/ui/welcome-art.png" id="4_ml4h8"]
-[ext_resource type="Script" path="res://scenes/Welcome/TitleArt.gd" id="5_cobtm"]
-[ext_resource type="Texture2D" uid="uid://c1co61f4no3l8" path="res://assets/ui/play-button.png" id="6_ktji5"]
+[ext_resource type="Texture2D" uid="uid://bfueibxcj8h81" path="res://assets/backgrounds/welcome.png" id="1_nv5x6"]
+[ext_resource type="Texture2D" uid="uid://beto3s6j2f01h" path="res://assets/ui/PlayButton/play-button.png" id="2_ux7fu"]
+[ext_resource type="BitMap" uid="uid://ntkgebi6lg7e" path="res://assets/ui/PlayButton/play-button.bmp" id="3_sjjyf"]
+[ext_resource type="Texture2D" uid="uid://dulcij7bq46ug" path="res://assets/ui/capy-in-water.png" id="5_8w1h3"]
+[ext_resource type="Script" path="res://scenes/Welcome/Capy.gd" id="6_xohhw"]
 [ext_resource type="Script" path="res://scenes/Welcome/TextureButton.gd" id="7_7c10k"]
 
 [node name="Welcome" type="Node2D"]
 
 [node name="Backdrop" type="Sprite2D" parent="."]
-position = Vector2(576.75, 324.5)
-scale = Vector2(1.29574, 1.2793)
-texture = ExtResource("1_jsd4k")
+position = Vector2(576, 324)
+scale = Vector2(1.02926, 1.0162)
+texture = ExtResource("1_nv5x6")
 
-[node name="TitleText" type="Sprite2D" parent="."]
-position = Vector2(588, 139)
-texture = ExtResource("2_o6myq")
-script = ExtResource("3_blcxa")
-
-[node name="TitleArt" type="Sprite2D" parent="."]
-position = Vector2(563, 318)
-texture = ExtResource("4_ml4h8")
-script = ExtResource("5_cobtm")
+[node name="Capy" type="Sprite2D" parent="."]
+texture = ExtResource("5_8w1h3")
+script = ExtResource("6_xohhw")
 
 [node name="PlayButton" type="TextureButton" parent="."]
 offset_left = 0.00012207
 offset_top = 6.10352e-05
 offset_right = 254.0
 offset_bottom = 87.0001
-texture_normal = ExtResource("6_ktji5")
+texture_normal = ExtResource("2_ux7fu")
+texture_click_mask = ExtResource("3_sjjyf")
 script = ExtResource("7_7c10k")
+
+[connection signal="mouse_entered" from="PlayButton" to="PlayButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="PlayButton" method="_on_mouse_exited"]
