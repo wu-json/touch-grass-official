@@ -6,7 +6,7 @@ func _ready():
 	position = Vector2(viewport_size.x - self_size.x + 20, viewport_size.y - self_size.y + 40)
 	
 func _pressed():
-	SceneSwitcher.change_scene("res://scenes/Play/Play.tscn")
+	SceneSwitcher.change_scene("res://scenes/Dialogue/Dialogue.tscn")
 
 func _on_mouse_entered():
 	self.scale = Vector2(1.05, 1.05)

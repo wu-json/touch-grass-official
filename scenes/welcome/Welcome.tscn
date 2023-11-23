@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2hr0k7od3eu7"]
+
+[ext_resource type="Texture2D" uid="uid://bfueibxcj8h81" path="res://assets/backgrounds/welcome.png" id="1_08m6v"]
+[ext_resource type="Texture2D" uid="uid://dulcij7bq46ug" path="res://assets/ui/capy-in-water.png" id="2_mskee"]
+[ext_resource type="Script" path="res://scenes/Welcome/Capy.gd" id="3_il7ie"]
+[ext_resource type="Texture2D" uid="uid://beto3s6j2f01h" path="res://assets/ui/PlayButton/play-button.png" id="4_d3vab"]
+[ext_resource type="BitMap" uid="uid://ntkgebi6lg7e" path="res://assets/ui/PlayButton/play-button.bmp" id="5_qrvhx"]
+[ext_resource type="Script" path="res://scenes/Welcome/TextureButton.gd" id="6_dotfv"]
+
+[node name="Welcome" type="Node2D"]
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.02926, 1.0162)
+texture = ExtResource("1_08m6v")
+
+[node name="Capy" type="Sprite2D" parent="."]
+texture = ExtResource("2_mskee")
+script = ExtResource("3_il7ie")
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 0.00012207
+offset_top = 6.10352e-05
+offset_right = 254.0
+offset_bottom = 87.0001
+texture_normal = ExtResource("4_d3vab")
+texture_click_mask = ExtResource("5_qrvhx")
+script = ExtResource("6_dotfv")
+
+[connection signal="mouse_entered" from="PlayButton" to="PlayButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="PlayButton" method="_on_mouse_exited"]
