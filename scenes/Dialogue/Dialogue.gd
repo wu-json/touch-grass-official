@@ -14,10 +14,5 @@ func _ready():
 	for dialogue in DIALOGUE:
 		$TextBox.queue_text(dialogue)
 
-
 func _on_text_box_text_queue_exhausted():
-	print("done")
-
-
-func _on_skip_button_mouse_exited():
-	pass # Replace with function body.
+	SceneSwitcher.change_scene("res://scenes/Play/Play.tscn")
