@@ -29,6 +29,8 @@ func _process(delta):
 		State.READY:
 			if !text_queue.is_empty():
 				display_text()
+			else:
+				hide_textbox()
 		State.READING:
 			if Input.is_action_just_pressed("click"):
 				change_state(State.FINISHED)
