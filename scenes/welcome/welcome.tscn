@@ -20,3 +20,6 @@ offset_bottom = 87.0001
 texture_normal = ExtResource("6_ktji5")
 texture_click_mask = ExtResource("3_ryyfm")
 script = ExtResource("7_7c10k")
+
+[connection signal="mouse_entered" from="PlayButton" to="PlayButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="PlayButton" method="_on_mouse_exited"]

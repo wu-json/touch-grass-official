@@ -7,3 +7,9 @@ func _ready():
 	
 func _pressed():
 	SceneSwitcher.change_scene("res://scenes/Play/Play.tscn")
+
+func _on_mouse_entered():
+	self.scale = Vector2(1.05,1.05)
+
+func _on_mouse_exited():
+	self.scale = Vector2(1.0,1.0)
