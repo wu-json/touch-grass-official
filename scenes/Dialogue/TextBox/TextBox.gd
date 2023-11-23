@@ -30,11 +30,11 @@ func _process(delta):
 		State.READING:
 			if Input.is_action_just_pressed("click"):
 				change_state(State.FINISHED)
-		State.FINISHED:
-			if Input.is_action_just_pressed('click'):
 				tween.kill()
 				label.set_visible_ratio(1)
 				tween = get_tree().create_tween()
+		State.FINISHED:
+			if Input.is_action_just_pressed('click'):
 				change_state(State.READY)
 				
 func queue_text(next_text):

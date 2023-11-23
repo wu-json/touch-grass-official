@@ -1,4 +1,18 @@
 extends Node2D
 
+const DIALOGUE = [
+	"Hey there. I'm Capy...",
+	"I'm a capybarra, but I'm not very social...",
+	"I like to hang out in this pond by myself and play games and watch anime on my phone...",
+	"But the other day another capybarra told me to \"touch some grass\".",
+	"I thought I would give it a try since I'm feeling kind of down these days...",
+	"Do you mind helping me out? All you need to do is touch as much grass as possible while avoiding other distractions.",
+	"Awesome...thank you. Let's get started then..."
+]
+
 func _ready():
-	$TextBox.queue_text("What the fuck do you want.")
+	for dialogue in DIALOGUE:
+		$TextBox.queue_text(dialogue)
+
+func _process(_delta):
+	print(len($TextBox.text_queue))
