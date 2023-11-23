@@ -1,35 +1,62 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgh0p4bp18bcq"]
+[gd_scene load_steps=8 format=3 uid="uid://dgh0p4bp18bcq"]
 
-[ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_eenou"]
-[ext_resource type="Script" path="res://scenes/Score/Score.gd" id="1_rwxlj"]
-[ext_resource type="Texture2D" uid="uid://dile3lglid4lo" path="res://assets/ui/play-again-button.png" id="2_3vmls"]
+[ext_resource type="Texture2D" uid="uid://dibrqxc40aru" path="res://assets/ui/green.png" id="2_f6j2l"]
+[ext_resource type="Texture2D" uid="uid://dn375nkwdbj8v" path="res://assets/mobs/grass.png" id="2_oc0do"]
 [ext_resource type="Script" path="res://scenes/Score/PlayAgainButton.gd" id="3_uk60y"]
-[ext_resource type="Texture2D" uid="uid://bue3jvod0svxx" path="res://assets/ui/score-art.png" id="4_oj7qh"]
-[ext_resource type="Script" path="res://scenes/Score/ScoreArt.gd" id="5_re5p7"]
+[ext_resource type="Texture2D" uid="uid://dile3lglid4lo" path="res://assets/ui/PlayAgainButton/play-again-button.png" id="3_x18ji"]
+[ext_resource type="BitMap" uid="uid://byow21kdkwgc7" path="res://assets/ui/PlayAgainButton/play-again-button.bmp" id="4_xgac1"]
 [ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_38kus"]
-[ext_resource type="Script" path="res://scenes/Score/ScoreLabel.gd" id="8_15qip"]
+
+[sub_resource type="GDScript" id="GDScript_ygby2"]
+script/source = "extends Node2D
+
+func _ready():
+	var score_param = SceneSwitcher.get_param(\"score\")
+	var score: int = score_param if score_param != null else 69420
+	$ScoreLabel.set_text(str(score))
+"
 
 [node name="Score" type="Node2D"]
-script = ExtResource("1_rwxlj")
+script = SubResource("GDScript_ygby2")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
-position = Vector2(576.75, 324.5)
-scale = Vector2(1.29574, 1.2793)
-texture = ExtResource("1_eenou")
+position = Vector2(571, 327)
+scale = Vector2(1.0699, 1.05632)
+texture = ExtResource("2_f6j2l")
+
+[node name="GrassMob" type="Sprite2D" parent="."]
+position = Vector2(630, 307)
+scale = Vector2(1.19903, 1.19903)
+texture = ExtResource("2_oc0do")
 
 [node name="PlayAgainButton" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("2_3vmls")
+offset_left = 802.0
+offset_top = 506.0
+offset_right = 1153.0
+offset_bottom = 643.0
+texture_normal = ExtResource("3_x18ji")
+texture_click_mask = ExtResource("4_xgac1")
 script = ExtResource("3_uk60y")
 
-[node name="ScoreArt" type="Sprite2D" parent="."]
-texture = ExtResource("4_oj7qh")
-script = ExtResource("5_re5p7")
+[node name="ScoreTitle" type="Label" parent="."]
+offset_left = 727.0
+offset_top = 245.0
+offset_right = 976.0
+offset_bottom = 305.0
+theme_override_colors/font_color = Color(0.443137, 0.807843, 0.592157, 1)
+theme_override_fonts/font = ExtResource("7_38kus")
+theme_override_font_sizes/font_size = 45
+text = "Your score:"
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_colors/font_color = Color(0.709804, 0.980392, 0, 1)
+offset_left = 728.0
+offset_top = 307.0
+offset_right = 977.0
+offset_bottom = 374.0
+theme_override_colors/font_color = Color(0.85098, 0.976471, 0.894118, 1)
 theme_override_fonts/font = ExtResource("7_38kus")
-script = ExtResource("8_15qip")
+theme_override_font_sizes/font_size = 50
+text = "score"
+
+[connection signal="mouse_entered" from="PlayAgainButton" to="PlayAgainButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PlayAgainButton" to="PlayAgainButton" method="_on_mouse_exited"]
