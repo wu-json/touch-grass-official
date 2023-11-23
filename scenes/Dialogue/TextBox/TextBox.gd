@@ -19,10 +19,6 @@ var text_queue = []
 
 func _ready():
 	hide_textbox()
-	queue_text("1 hello mf saldkjflskdjflkdsaf")
-	queue_text("2 hello mf saldkjflskdjflkdsaf")
-	queue_text("3 hello mf saldkjflskdjflkdsaf")
-	queue_text("4 hello mf saldkjflskdjflkdsaf")
 	
 func _process(delta):
 	match current_state:
