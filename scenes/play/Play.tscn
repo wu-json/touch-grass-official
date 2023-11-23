@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://q4wy6oj784do"]
 
-[ext_resource type="Texture2D" uid="uid://d2lhu86w4y2e7" path="res://assets/backgrounds/dark-blank.png" id="1_8f6o5"]
 [ext_resource type="Script" path="res://scenes/Play/Play.gd" id="1_h7aus"]
 [ext_resource type="Texture2D" uid="uid://bj1rxrlweyof3" path="res://assets/characters/person.png" id="2_i65a2"]
+[ext_resource type="Texture2D" uid="uid://bsvy7vt8q7qqy" path="res://assets/backgrounds/play.png" id="2_mi7v6"]
 [ext_resource type="Script" path="res://scenes/Play/Character.gd" id="3_iwegr"]
 [ext_resource type="Script" path="res://scenes/Play/GameTimerLabel.gd" id="7_01nju"]
 [ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_xqeqe"]
@@ -13,9 +13,9 @@
 script = ExtResource("1_h7aus")
 
 [node name="Backdrop" type="Sprite2D" parent="."]
-position = Vector2(576.75, 324.5)
-scale = Vector2(1.29574, 1.2793)
-texture = ExtResource("1_8f6o5")
+position = Vector2(570, 328)
+scale = Vector2(1.05739, 1.04397)
+texture = ExtResource("2_mi7v6")
 
 [node name="Character" type="Sprite2D" parent="."]
 texture = ExtResource("2_i65a2")
