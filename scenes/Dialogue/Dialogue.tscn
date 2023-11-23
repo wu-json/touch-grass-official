@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0skadof3t1j3"]
+
+[ext_resource type="Texture2D" uid="uid://cs62aqdeppt40" path="res://assets/backgrounds/story.png" id="1_daq60"]
+
+[node name="Dialogue" type="Node2D"]
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(577.889, 326)
+scale = Vector2(1.01543, 1.01543)
+texture = ExtResource("1_daq60")
