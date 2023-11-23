@@ -4,11 +4,12 @@
 [ext_resource type="Script" path="res://scenes/Dialogue/TextBox/TextBox.gd" id="1_1u7lk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6anr"]
-bg_color = Color(0.00392157, 0.0235294, 0.00784314, 1)
+bg_color = Color(0.25098, 0.184314, 0.113725, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
+border_color = Color(0.168627, 0.0901961, 0, 1)
 
 [node name="TextBox" type="CanvasLayer"]
 script = ExtResource("1_1u7lk")
