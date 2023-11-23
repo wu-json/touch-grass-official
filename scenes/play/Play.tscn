@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://scenes/Play/Play.gd" id="1_h7aus"]
 [ext_resource type="Texture2D" uid="uid://bsvy7vt8q7qqy" path="res://assets/backgrounds/play.png" id="2_mi7v6"]
+[ext_resource type="Texture2D" uid="uid://ch4v6a2agtaa2" path="res://assets/ui/big-grass.png" id="3_dbw4g"]
 [ext_resource type="Script" path="res://scenes/Play/Character.gd" id="3_iwegr"]
 [ext_resource type="Texture2D" uid="uid://cdas8ukckjov0" path="res://assets/characters/capy.png" id="3_rttj0"]
 [ext_resource type="Script" path="res://scenes/Play/GameTimerLabel.gd" id="7_01nju"]
 [ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_xqeqe"]
 [ext_resource type="Script" path="res://scenes/Play/GameTimer.gd" id="8_iol4g"]
-[ext_resource type="Script" path="res://scenes/Play/Score.gd" id="8_mv38e"]
 
 [node name="Play" type="Node2D"]
 script = ExtResource("1_h7aus")
@@ -17,16 +17,23 @@ position = Vector2(570, 328)
 scale = Vector2(1.05739, 1.04397)
 texture = ExtResource("2_mi7v6")
 
+[node name="ScoreBorder" type="Sprite2D" parent="."]
+position = Vector2(1046, 74)
+texture = ExtResource("3_dbw4g")
+
+[node name="ScoreCounter" type="Label" parent="."]
+offset_left = 961.0
+offset_top = 40.0
+offset_right = 1052.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0.380392, 0.909804, 0.584314, 1)
+theme_override_fonts/font = ExtResource("7_xqeqe")
+theme_override_font_sizes/font_size = 30
+text = "0"
+
 [node name="Character" type="Sprite2D" parent="."]
 texture = ExtResource("3_rttj0")
 script = ExtResource("3_iwegr")
-
-[node name="ScoreCounter" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_fonts/font = ExtResource("7_xqeqe")
-text = "YOOOOOOkj"
-script = ExtResource("8_mv38e")
 
 [node name="GameTimer" type="Timer" parent="."]
 script = ExtResource("8_iol4g")
