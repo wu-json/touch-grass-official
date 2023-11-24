@@ -4,5 +4,4 @@
 
 [node name="BackgroundMusic" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_w3a2s")
-volume_db = -5.0
 autoplay = true
