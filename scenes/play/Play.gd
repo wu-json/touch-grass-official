@@ -3,6 +3,7 @@ extends Node2D
 var grass_mob = preload("res://scenes/Play/Mobs/Grass/Grass.tscn")
 var hub_mob = preload("res://scenes/Play/Mobs/Hub/Hub.tscn")
 var purple_mob = preload("res://scenes/Play/Mobs/Purple/Purple.tscn")
+var blue_snake_mob = preload("res://scenes/Play/Mobs/BlueSnake/BlueSnake.tscn")
 
 @onready var score_counter = $Overlay/ScoreCounter
 @onready var game_timer = $Overlay/GameTimer
@@ -41,6 +42,12 @@ func on_click_purple_mob():
 	obstacle_mobs_on_screen -= 1
 	score += points
 	score_counter.set_text(str(score))
+	
+func on_click_blue_snake_mob():
+	var points = -10
+	obstacle_mobs_on_screen -= 1
+	score += points
+	score_counter.set_text(str(score))
 
 func _spawn_grass_mob():
 	var viewport_size = get_viewport_rect().size
@@ -67,6 +74,16 @@ func _spawn_purple_mob():
 	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
 	add_child(start_mob)
 	start_mob.connect("purple_pressed", on_click_purple_mob)
+	obstacle_mobs_on_screen += 1
+	
+func _spawn_blue_snake_mob():
+	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
+		return
+	var viewport_size = get_viewport_rect().size
+	var start_mob = blue_snake_mob.instantiate()
+	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(start_mob)
+	start_mob.connect("blue_snake_pressed", on_click_blue_snake_mob)
 	obstacle_mobs_on_screen += 1
 	
 func _ready():
