@@ -1,6 +1,6 @@
 extends Timer
 
-const GAME_TIME_SECONDS = 120
+const GAME_TIME_SECONDS = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
