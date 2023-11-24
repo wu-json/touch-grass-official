@@ -33,7 +33,6 @@ func on_click_grass_mob():
 			"_spawn_uwu_mob"
 		]
 		var spawn_function = obstacle_spawn_functions[randi() % obstacle_spawn_functions.size()]
-		print(spawn_function)
 		call(spawn_function)
 
 func on_click_hub_mob():
