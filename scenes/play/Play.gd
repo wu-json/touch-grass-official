@@ -4,6 +4,8 @@ var grass_mob = preload("res://scenes/Play/Mobs/Grass/Grass.tscn")
 var hub_mob = preload("res://scenes/Play/Mobs/Hub/Hub.tscn")
 var purple_mob = preload("res://scenes/Play/Mobs/Purple/Purple.tscn")
 var blue_snake_mob = preload("res://scenes/Play/Mobs/BlueSnake/BlueSnake.tscn")
+var controller_mob = preload("res://scenes/Play/Mobs/Controller/Controller.tscn")
+var uwu_mob = preload("res://scenes/Play/Mobs/Controller/Controller.tscn")
 
 @onready var score_counter = $Overlay/ScoreCounter
 @onready var game_timer = $Overlay/GameTimer
@@ -26,7 +28,9 @@ func on_click_grass_mob():
 		var obstacle_spawn_functions = [
 			"_spawn_hub_mob",
 			"_spawn_purple_mob",
-			"_spawn_blue_snake_mob"
+			"_spawn_blue_snake_mob",
+			"_spawn_controller_mob",
+			"_spawn_uwu_mob"
 		]
 		var spawn_function = obstacle_spawn_functions[randi() % obstacle_spawn_functions.size()]
 		print(spawn_function)
@@ -46,6 +50,18 @@ func on_click_purple_mob():
 	
 func on_click_blue_snake_mob():
 	var points = -10
+	obstacle_mobs_on_screen -= 1
+	score += points
+	score_counter.set_text(str(score))
+	
+func on_click_controller_mob():
+	var points = -3
+	obstacle_mobs_on_screen -= 1
+	score += points
+	score_counter.set_text(str(score))
+	
+func on_click_uwu_mob():
+	var points = -5
 	obstacle_mobs_on_screen -= 1
 	score += points
 	score_counter.set_text(str(score))
@@ -85,6 +101,26 @@ func _spawn_blue_snake_mob():
 	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
 	add_child(start_mob)
 	start_mob.connect("blue_snake_pressed", on_click_blue_snake_mob)
+	obstacle_mobs_on_screen += 1
+	
+func _spawn_controller_mob():
+	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
+		return
+	var viewport_size = get_viewport_rect().size
+	var start_mob = controller_mob.instantiate()
+	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(start_mob)
+	start_mob.connect("controller_pressed", on_click_controller_mob)
+	obstacle_mobs_on_screen += 1
+	
+func _spawn_uwu_mob():
+	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
+		return
+	var viewport_size = get_viewport_rect().size
+	var start_mob = uwu_mob.instantiate()
+	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(start_mob)
+	start_mob.connect("uwu_pressed", on_click_uwu_mob)
 	obstacle_mobs_on_screen += 1
 	
 func _ready():
