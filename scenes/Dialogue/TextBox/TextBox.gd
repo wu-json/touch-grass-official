@@ -6,7 +6,8 @@ const CHAR_READ_RATE = 0.03
 # The tutorial was made using Godot 3 but I adapted it to Godot 4 (Tweens are no longer a node).
 @onready var textbox_container = $TextBoxContainer
 @onready var label = $TextBoxContainer/MarginContainer/HBoxContainer/Label
-@onready var tween 
+@onready var tween
+@onready var sfx_select = SFX.get_node("Select")
 
 enum State {
 	READY,
@@ -36,6 +37,7 @@ func _process(_delta):
 				label.set_visible_ratio(1)
 		State.FINISHED:
 			if Input.is_action_just_pressed('click'):
+				sfx_select.play()
 				change_state(State.READY)
 				if text_queue.is_empty():
 					text_queue_exhausted.emit()
