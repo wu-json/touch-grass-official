@@ -10,7 +10,7 @@ var uwu_mob = preload("res://scenes/Play/Mobs/Uwu/Uwu.tscn")
 @onready var score_counter = $Overlay/ScoreCounter
 @onready var game_timer = $Overlay/GameTimer
 
-const MAX_OBSTACLE_MOBS = 5
+const MAX_OBSTACLE_MOBS = 15
 
 var score = 0;
 var obstacle_mobs_on_screen = 0;
@@ -24,7 +24,7 @@ func on_click_grass_mob():
 	score_counter.set_text(str(score))
 	_spawn_grass_mob()
 	
-	if randf() <= 0.5:
+	if randf() <= 0.20:
 		var obstacle_spawn_functions = [
 			"_spawn_hub_mob",
 			"_spawn_purple_mob",
