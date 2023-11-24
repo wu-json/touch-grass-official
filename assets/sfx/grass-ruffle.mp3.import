@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/grass-ruffle.mp3-eb1577feda32dc7f90482d365a6c
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=25.23
 beat_count=0
