@@ -10,7 +10,7 @@ var uwu_mob = preload("res://scenes/Play/Mobs/Uwu/Uwu.tscn")
 @onready var score_counter = $Overlay/ScoreCounter
 @onready var game_timer = $Overlay/GameTimer
 
-const MAX_OBSTACLE_MOBS = 3
+const MAX_OBSTACLE_MOBS = 5
 
 var score = 0;
 var obstacle_mobs_on_screen = 0;
