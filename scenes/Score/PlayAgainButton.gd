@@ -1,8 +1,10 @@
 extends TextureButton
 
-func _pressed():
-	SceneSwitcher.change_scene("res://scenes/Play/Play.tscn")
+@onready var sfx_select = SFX.get_node("Select")
 
+func _pressed():
+	sfx_select.play()
+	SceneSwitcher.change_scene("res://scenes/Play/Play.tscn")
 
 func _on_mouse_entered():
 	self.scale = Vector2(1.02, 1.05)
