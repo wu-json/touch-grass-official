@@ -42,5 +42,4 @@ func _spawn_hub_mob():
 func _ready():
 	score_counter.set_text(str(score))
 	_spawn_grass_mob()
-	_spawn_hub_mob()
 	game_timer.connect("timeout", on_timer_end)
