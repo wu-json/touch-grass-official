@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb6hs8pv0vdfi"]
+
+[ext_resource type="AudioStream" uid="uid://dmps2idrijv81" path="res://assets/music/one-step-outside.wav" id="1_w3a2s"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_w3a2s")
+autoplay = true
