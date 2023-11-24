@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgh0p4bp18bcq"]
+[gd_scene load_steps=10 format=3 uid="uid://dgh0p4bp18bcq"]
 
 [ext_resource type="PackedScene" uid="uid://br1pn83rciujq" path="res://scenes/Score/CapyTouching/CapyTouching.tscn" id="2_dlwsh"]
 [ext_resource type="Texture2D" uid="uid://dibrqxc40aru" path="res://assets/ui/green.png" id="2_f6j2l"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dile3lglid4lo" path="res://assets/ui/PlayAgainButton/play-again-button.png" id="3_x18ji"]
 [ext_resource type="BitMap" uid="uid://byow21kdkwgc7" path="res://assets/ui/PlayAgainButton/play-again-button.bmp" id="4_xgac1"]
 [ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_38kus"]
+[ext_resource type="AudioStream" uid="uid://cks0jei58015k" path="res://assets/sfx/grass-ruffle-fast.wav" id="8_e8fcj"]
 
 [sub_resource type="GDScript" id="GDScript_ygby2"]
 script/source = "extends Node2D
@@ -61,6 +62,10 @@ theme_override_colors/font_color = Color(0.85098, 0.976471, 0.894118, 1)
 theme_override_fonts/font = ExtResource("7_38kus")
 theme_override_font_sizes/font_size = 50
 text = "score"
+
+[node name="RuffleSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_e8fcj")
+autoplay = true
 
 [connection signal="mouse_entered" from="PlayAgainButton" to="PlayAgainButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PlayAgainButton" to="PlayAgainButton" method="_on_mouse_exited"]
