@@ -20,6 +20,14 @@ func on_click_grass_mob():
 	score += points
 	score_counter.set_text(str(score))
 	_spawn_grass_mob()
+	
+	if randf() <= 0.25:
+		var obstacle_spawn_functions = [
+			on_click_hub_mob,
+			on_click_purple_mob
+		]
+		var spawn_function = obstacle_spawn_functions[randi() % obstacle_spawn_functions.size()]
+		
 
 func on_click_hub_mob():
 	var points = -5
