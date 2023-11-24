@@ -25,7 +25,8 @@ func on_click_grass_mob():
 	if randf() <= 0.25:
 		var obstacle_spawn_functions = [
 			"_spawn_hub_mob",
-			"_spawn_purple_mob"
+			"_spawn_purple_mob",
+			"_spawn_blue_snake_mob"
 		]
 		var spawn_function = obstacle_spawn_functions[randi() % obstacle_spawn_functions.size()]
 		print(spawn_function)

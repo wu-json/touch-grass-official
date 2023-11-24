@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/Play/Mobs/BlueSnake/BlueSnake.gd" id="1_noprx"]
 [ext_resource type="Script" path="res://scenes/Play/Mobs/BlueSnake/Area2D.gd" id="2_a60sj"]
-[ext_resource type="Texture2D" uid="uid://bltkc8s4u0f8k" path="res://assets/mobs/purple.png" id="3_30ls8"]
+[ext_resource type="Texture2D" uid="uid://bls2n51ai5cvf" path="res://assets/mobs/bluesnake.png" id="3_uo6jx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0x6d4"]
 size = Vector2(87, 82)
@@ -20,4 +20,4 @@ shape = SubResource("RectangleShape2D_0x6d4")
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(14, 19)
 scale = Vector2(0.84466, 0.84466)
-texture = ExtResource("3_30ls8")
+texture = ExtResource("3_uo6jx")
