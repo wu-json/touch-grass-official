@@ -41,6 +41,8 @@ func _spawn_grass_mob():
 	start_mob.connect("grass_pressed", on_click_grass_mob)
 	
 func _spawn_hub_mob():
+	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
+		return
 	var viewport_size = get_viewport_rect().size
 	var start_mob = hub_mob.instantiate()
 	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
@@ -49,6 +51,8 @@ func _spawn_hub_mob():
 	obstacle_mobs_on_screen += 1
 
 func _spawn_purple_mob():
+	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
+		return
 	var viewport_size = get_viewport_rect().size
 	var start_mob = purple_mob.instantiate()
 	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
