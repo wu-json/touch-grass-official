@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwwojrffan81b"]
+
+[ext_resource type="Script" path="res://scenes/Play/Mobs/Uwu/Uwu.gd" id="1_wplq6"]
+[ext_resource type="Script" path="res://scenes/Play/Mobs/Uwu/Area2D.gd" id="2_wxv7a"]
+[ext_resource type="Texture2D" uid="uid://djo41tf68do4h" path="res://assets/mobs/uwu.png" id="3_galek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0x6d4"]
+size = Vector2(86, 78)
+
+[node name="UwuMob" type="Node2D"]
+script = ExtResource("1_wplq6")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_wxv7a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(15, 22)
+shape = SubResource("RectangleShape2D_0x6d4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(14, 19)
+scale = Vector2(0.84466, 0.84466)
+texture = ExtResource("3_galek")
