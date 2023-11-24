@@ -21,7 +21,7 @@ func on_click_grass_mob():
 	_spawn_grass_mob()
 
 func on_click_hub_mob():
-	var points = -1
+	var points = -5
 	score += points
 	score_counter.set_text(str(score))
 
