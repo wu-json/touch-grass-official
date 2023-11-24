@@ -24,7 +24,7 @@ func on_click_grass_mob():
 	score_counter.set_text(str(score))
 	_spawn_grass_mob()
 	
-	if randf() <= 0.8:
+	if randf() <= 0.5:
 		var obstacle_spawn_functions = [
 			"_spawn_hub_mob",
 			"_spawn_purple_mob",
