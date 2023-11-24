@@ -24,7 +24,7 @@ func on_click_grass_mob():
 	score_counter.set_text(str(score))
 	_spawn_grass_mob()
 	
-	if randf() <= 0.25:
+	if randf() <= 0.8:
 		var obstacle_spawn_functions = [
 			"_spawn_hub_mob",
 			"_spawn_purple_mob",
@@ -68,59 +68,59 @@ func on_click_uwu_mob():
 
 func _spawn_grass_mob():
 	var viewport_size = get_viewport_rect().size
-	var start_mob = grass_mob.instantiate()
-	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
-	add_child(start_mob)
-	start_mob.connect("grass_pressed", on_click_grass_mob)
+	var mob = grass_mob.instantiate()
+	mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(mob)
+	mob.connect("grass_pressed", on_click_grass_mob)
 	
 func _spawn_hub_mob():
 	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
 		return
 	var viewport_size = get_viewport_rect().size
-	var start_mob = hub_mob.instantiate()
-	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
-	add_child(start_mob)
-	start_mob.connect("hub_pressed", on_click_hub_mob)
+	var mob = hub_mob.instantiate()
+	mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(mob)
+	mob.connect("hub_pressed", on_click_hub_mob)
 	obstacle_mobs_on_screen += 1
 
 func _spawn_purple_mob():
 	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
 		return
 	var viewport_size = get_viewport_rect().size
-	var start_mob = purple_mob.instantiate()
-	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
-	add_child(start_mob)
-	start_mob.connect("purple_pressed", on_click_purple_mob)
+	var mob = purple_mob.instantiate()
+	mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(mob)
+	mob.connect("purple_pressed", on_click_purple_mob)
 	obstacle_mobs_on_screen += 1
 	
 func _spawn_blue_snake_mob():
 	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
 		return
 	var viewport_size = get_viewport_rect().size
-	var start_mob = blue_snake_mob.instantiate()
-	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
-	add_child(start_mob)
-	start_mob.connect("blue_snake_pressed", on_click_blue_snake_mob)
+	var mob = blue_snake_mob.instantiate()
+	mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(mob)
+	mob.connect("blue_snake_pressed", on_click_blue_snake_mob)
 	obstacle_mobs_on_screen += 1
 	
 func _spawn_controller_mob():
 	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
 		return
 	var viewport_size = get_viewport_rect().size
-	var start_mob = controller_mob.instantiate()
-	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
-	add_child(start_mob)
-	start_mob.connect("controller_pressed", on_click_controller_mob)
+	var mob = controller_mob.instantiate()
+	mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(mob)
+	mob.connect("controller_pressed", on_click_controller_mob)
 	obstacle_mobs_on_screen += 1
 	
 func _spawn_uwu_mob():
 	if (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
 		return
 	var viewport_size = get_viewport_rect().size
-	var start_mob = uwu_mob.instantiate()
-	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
-	add_child(start_mob)
-	start_mob.connect("uwu_pressed", on_click_uwu_mob)
+	var mob = uwu_mob.instantiate()
+	mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(mob)
+	mob.connect("uwu_pressed", on_click_uwu_mob)
 	obstacle_mobs_on_screen += 1
 	
 func _ready():
