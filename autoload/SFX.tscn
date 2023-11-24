@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://0krgcea4fujb"]
+[gd_scene load_steps=4 format=3 uid="uid://0krgcea4fujb"]
 
 [ext_resource type="Script" path="res://autoload/SFX.gd" id="1_b1463"]
 [ext_resource type="AudioStream" uid="uid://brr75ddfh5fx5" path="res://assets/sfx/select.mp3" id="2_vylla"]
+[ext_resource type="AudioStream" uid="uid://c7byv24ngunwj" path="res://assets/sfx/grass-ruffle.mp3" id="3_v7pxo"]
 
 [node name="SFX" type="Node2D"]
 script = ExtResource("1_b1463")
 
 [node name="Select" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_vylla")
+
+[node name="GrassRuffle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_v7pxo")
