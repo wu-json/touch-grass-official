@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgh0p4bp18bcq"]
+[gd_scene load_steps=9 format=3 uid="uid://dgh0p4bp18bcq"]
 
+[ext_resource type="PackedScene" uid="uid://br1pn83rciujq" path="res://scenes/Score/CapyTouching/CapyTouching.tscn" id="2_dlwsh"]
 [ext_resource type="Texture2D" uid="uid://dibrqxc40aru" path="res://assets/ui/green.png" id="2_f6j2l"]
 [ext_resource type="Texture2D" uid="uid://dn375nkwdbj8v" path="res://assets/mobs/grass.png" id="2_oc0do"]
 [ext_resource type="Script" path="res://scenes/Score/PlayAgainButton.gd" id="3_uk60y"]
@@ -23,6 +24,9 @@ script = SubResource("GDScript_ygby2")
 position = Vector2(571, 327)
 scale = Vector2(1.0699, 1.05632)
 texture = ExtResource("2_f6j2l")
+
+[node name="CapyTouching" parent="." instance=ExtResource("2_dlwsh")]
+position = Vector2(553, 312)
 
 [node name="GrassMob" type="Sprite2D" parent="."]
 position = Vector2(630, 307)
