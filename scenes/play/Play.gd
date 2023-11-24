@@ -5,7 +5,7 @@ var hub_mob = preload("res://scenes/Play/Mobs/Hub/Hub.tscn")
 var purple_mob = preload("res://scenes/Play/Mobs/Purple/Purple.tscn")
 var blue_snake_mob = preload("res://scenes/Play/Mobs/BlueSnake/BlueSnake.tscn")
 var controller_mob = preload("res://scenes/Play/Mobs/Controller/Controller.tscn")
-var uwu_mob = preload("res://scenes/Play/Mobs/Controller/Controller.tscn")
+var uwu_mob = preload("res://scenes/Play/Mobs/Uwu/Uwu.tscn")
 
 @onready var score_counter = $Overlay/ScoreCounter
 @onready var game_timer = $Overlay/GameTimer
