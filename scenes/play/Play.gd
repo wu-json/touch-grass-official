@@ -2,6 +2,7 @@ extends Node2D
 
 var grass_mob = preload("res://scenes/Play/Mobs/Grass/Grass.tscn")
 var hub_mob = preload("res://scenes/Play/Mobs/Hub/Hub.tscn")
+var purple_mob = preload("res://scenes/Play/Mobs/Purple/Purple.tscn")
 
 @onready var score_counter = $Overlay/ScoreCounter
 @onready var game_timer = $Overlay/GameTimer
@@ -24,6 +25,11 @@ func on_click_hub_mob():
 	var points = -5
 	score += points
 	score_counter.set_text(str(score))
+	
+func on_click_purple_mob():
+	var points = -5
+	score += points
+	score_counter.set_text(str(score))
 
 func _spawn_grass_mob():
 	var viewport_size = get_viewport_rect().size
@@ -38,6 +44,13 @@ func _spawn_hub_mob():
 	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
 	add_child(start_mob)
 	start_mob.connect("hub_pressed", on_click_hub_mob)
+
+func _spawn_purple_mob():
+	var viewport_size = get_viewport_rect().size
+	var start_mob = purple_mob.instantiate()
+	start_mob.position = Vector2(randi_range(0, viewport_size.x), randi_range(0, viewport_size.y - 120))
+	add_child(start_mob)
+	start_mob.connect("purple_pressed", on_click_purple_mob)
 	
 func _ready():
 	score_counter.set_text(str(score))
