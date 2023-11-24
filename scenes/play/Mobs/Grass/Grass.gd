@@ -1,6 +1,6 @@
 extends Node2D
 
-signal grass_pressed(points)
+signal grass_pressed
 
-func on_grass_pressed(points):
-	grass_pressed.emit(points)
+func on_grass_pressed():
+	grass_pressed.emit()
