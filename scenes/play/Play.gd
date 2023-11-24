@@ -1,6 +1,6 @@
 extends Node2D
 
-var grass_mob = preload("res://scenes/Play/GrassMob.tscn")
+var grass_mob = preload("res://scenes/Play/Mobs/Grass/Grass.tscn")
 
 @onready var score_counter = $Overlay/ScoreCounter
 @onready var game_timer = $Overlay/GameTimer
