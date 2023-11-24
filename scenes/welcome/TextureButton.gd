@@ -1,6 +1,6 @@
 extends TextureButton
 
-@onready var sfx_button_click = SFX.get_node("ButtonClick")
+@onready var sfx_select = SFX.get_node("Select")
 
 func _ready():
 	var viewport_size = get_viewport_rect().size
@@ -8,7 +8,7 @@ func _ready():
 	position = Vector2(viewport_size.x - self_size.x + 20, viewport_size.y - self_size.y + 40)
 	
 func _pressed():
-	sfx_button_click.play()
+	sfx_select.play()
 	SceneSwitcher.change_scene("res://scenes/Dialogue/Dialogue.tscn")
 
 func _on_mouse_entered():
