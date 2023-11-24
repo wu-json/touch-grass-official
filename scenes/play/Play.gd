@@ -24,7 +24,7 @@ func on_click_grass_mob():
 	score_counter.set_text(str(score))
 	_spawn_grass_mob()
 	
-	if randf() <= 0.20 && (obstacle_mobs_on_screen >= MAX_OBSTACLE_MOBS):
+	if randf() <= 0.20 && (obstacle_mobs_on_screen < MAX_OBSTACLE_MOBS):
 		var obstacle_spawn_functions = [
 			"_spawn_hub_mob",
 			"_spawn_purple_mob",
