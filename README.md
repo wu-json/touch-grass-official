@@ -8,6 +8,10 @@ Touching grass is a very simple arcade style click-game, where you try to touch 
 
 The game is playable in your browser on [Itch.io](https://thedarkpear.itch.io/touching-grass). On windows it should load pretty quickly but it seems like on MacOS chrome it takes a while to load.
 
+## Assets
+
+I hand-drew all assets for this game in ProCreate and also made the [OST](https://www.youtube.com/watch?v=pJh8RLXPPvo&ab_channel=Sen) myself in FL Studio (as you can probably tell by the production quality). Some sound effects were also borrowed from [Pixabay](https://pixabay.com/).
+
 ## Screenshots
 
 ![Screenshot 2023-12-01 at 2 43 37 PM](https://github.com/wu-json/touch-grass-official/assets/45532884/11bd1d6f-8b4c-49c9-ae71-5ba080cb147d)
