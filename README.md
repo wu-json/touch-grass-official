@@ -7,6 +7,3 @@ Touching grass is a very simple arcade style click-game, where you try to touch 
 ## Play the Game Yourself
 
 The game is playable in your browser on [Itch.io](https://thedarkpear.itch.io/touching-grass). On windows it should load pretty quickly but it seems like on MacOS chrome it takes a while to load.
-
-## Screenshots
-
