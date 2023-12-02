@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlbi5050qq6wu"]
 
-[ext_resource type="Script" path="res://scenes/PlayOld/Mobs/Hub/Hub.gd" id="1_38wl7"]
-[ext_resource type="Script" path="res://scenes/PlayOld/Mobs/Hub/Area2D.gd" id="2_lmrij"]
+[ext_resource type="Script" path="res://scenes/Play/Mobs/Hub/Hub.gd" id="1_38wl7"]
+[ext_resource type="Script" path="res://scenes/Play/Mobs/Hub/Area2D.gd" id="2_lmrij"]
 [ext_resource type="Texture2D" uid="uid://7lafxirt7w0i" path="res://assets/mobs/hub.png" id="3_arb8d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0x6d4"]

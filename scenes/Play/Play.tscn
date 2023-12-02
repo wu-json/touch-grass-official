@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://q4wy6oj784do"]
 
-[ext_resource type="Script" path="res://scenes/PlayOld/Play.gd" id="1_h7aus"]
+[ext_resource type="Script" path="res://scenes/Play/Play.gd" id="1_h7aus"]
 [ext_resource type="Texture2D" uid="uid://bsvy7vt8q7qqy" path="res://assets/backgrounds/play.png" id="2_mi7v6"]
 [ext_resource type="Texture2D" uid="uid://ch4v6a2agtaa2" path="res://assets/ui/big-grass.png" id="3_dbw4g"]
 [ext_resource type="Texture2D" uid="uid://cdas8ukckjov0" path="res://assets/characters/capy.png" id="3_rttj0"]
-[ext_resource type="Script" path="res://scenes/PlayOld/GameTimerLabel.gd" id="7_01nju"]
+[ext_resource type="Script" path="res://scenes/Play/GameTimerLabel.gd" id="7_01nju"]
 [ext_resource type="FontFile" uid="uid://cdaudk0xvjrof" path="res://fonts/Virgil.ttf" id="7_xqeqe"]
-[ext_resource type="Script" path="res://scenes/PlayOld/GameTimer.gd" id="8_iol4g"]
+[ext_resource type="Script" path="res://scenes/Play/GameTimer.gd" id="8_iol4g"]
 
 [node name="Play" type="Node2D"]
 script = ExtResource("1_h7aus")
